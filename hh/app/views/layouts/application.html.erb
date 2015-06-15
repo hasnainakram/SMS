@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Tutorial</title>
+      <%= stylesheet_link_tag    "application" %>
+      <%= javascript_include_tag "application" %>
+      <%= csrf_meta_tags %>
+  </head>
+  <body>
+
+  <div id="nav">
+<div style='float: right;'>
+    <% if current_user %>
+<%= link_to "Home", users_path(current_user.id) %>
+<%= link_to "Programs", programs_path(current_user.id) %>
+ <a href="users/about">About</a> 
+      <%= link_to "Edit Profile", edit_user_path(current_user.id) %>
+      <%= link_to "Logout", :user_sessions, method: :post %>
+    <% else %>
+
+      <%= link_to "Sign up", new_user_path %> |
+      <%= link_to "Login", :login %>
+    <% end %>
+  </div>
+  <div>
+    <p id="notice"><%= flash[:notice] %></p>
+    <p id="alert"><%= flash[:alert] %></p>
+  </div>
+  <%= yield %>
+
+  </body>
+</html>
+ <footer>
+<br>
+<br>
+<center>
+  <h3>Created by: Hasnain</h3>
+
+  <Contact information: <a href="mailto:hasnain.akram22@gmail.com">
+  Hasnain.akram22@gmail.com</a>.</p>
+</footer> 

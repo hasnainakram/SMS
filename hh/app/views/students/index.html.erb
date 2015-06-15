@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+<center>
+<h1>Add New Student</h1>
+<a>
+<hr class="colorgraph"><br>
+<a href="students/new"><input type="button" name="login" style="width:200px; height:100px;" value="Add Student" />
+<a href="users"><input type="button" name="login" style="width:200px; height:100px;" value="Back" />
+</a>
+<br>
+<br>
+<br>
+<br>
+<hr class="colorgraph">
+<br>
+<h1>Added Students</h1>
+
+<table border="3" style="width:80%">
+
+  <thead>
+    <tr>
+      <th>F name</th>
+      <th>L name</th>
+      <th>Gender</th>
+      <th>B date</th>
+      <th>Email</th>
+      <th>Mob</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Regstration no</th>
+      <th>Department</th>
+      <th>Program</th>
+      <th colspan="3">Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @students.each do |student| %>
+      <tr>
+        <td><%= student.F_name %></td>
+        <td><%= student.L_name %></td>
+        <td><%= student.gender %></td>
+        <td><%= student.B_date %></td>
+        <td><%= student.email %></td>
+        <td><%= student.mob %></td>
+        <td><%= student.address %></td>
+        <td><%= student.city %></td>
+        <td><%= student.state %></td>
+        <td><%= student.Regstration_no %></td>
+        <td><%= student.department %></td>
+        <td><%= student.program %></td>
+        <td><%= link_to 'Show', student %></td>
+        <td><%= link_to 'Edit', edit_student_path(student) %></td>
+        <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+

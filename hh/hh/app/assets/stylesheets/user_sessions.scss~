@@ -1,0 +1,8 @@
+// Place all the styles related to the UserSessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background-image: image-url('image.jpg'); // link to /assets/images/image.jpg
+}
+<hr class="colorgraph"><br>
+<%= form_tag user_sessions_path, :method => :post do %>

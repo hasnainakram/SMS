@@ -1,0 +1,11 @@
+<br>
+<br>
+<br>
+
+<h1>New Program</h1>
+<center>
+<hr class="colorgraph"><b
+<%= render 'form' %>
+<a>
+<%= link_to 'Back', programs_path %>
+</a>

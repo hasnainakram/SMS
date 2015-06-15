@@ -1,0 +1,67 @@
+<table border="3" style="width:80%">
+<center>
+<%= form_for(@student) do |f| %>
+  <% if @student.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+      <ul>
+      <% @student.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :First_name %><br>
+    <%= f.text_field :F_name %>
+  </div>
+  <div class="field">
+    <%= f.label :Last_name %><br>
+    <%= f.text_field :L_name %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br>
+    <%= f.text_field :gender %>
+  </div>
+  <div class="field">
+    <%= f.label :Date_of_birth %><br>
+    <%= f.date_select :B_date %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :mobile %><br>
+    <%= f.text_field :mob %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br>
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :Regstration_no %><br>
+    <%= f.text_field :Regstration_no %>
+  </div>
+  <div class="field">
+    <%= f.label :department %><br>
+    <%= f.text_field :department %>
+  </div>
+  <div class="field">
+    <%= f.label :program %><br>
+    <%= f.text_field :program %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  desig: MyString
+  date_of_join: 2015-05-31
+  address: MyString
+  qualification: MyString
+  cnic: 9.99
+  type: 
+  description: MyString
+
+two:
+  name: MyString
+  desig: MyString
+  date_of_join: 2015-05-31
+  address: MyString
+  qualification: MyString
+  cnic: 9.99
+  type: 
+  description: MyString

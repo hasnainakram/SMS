@@ -1,0 +1,8 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+<hr class="colorgraph"><br>
+<%= form_tag user_sessions_path, :method => :post do %>
+body {
+  background-image: image-url('image.jpg'); // link to /assets/images/image.jpg
+}
