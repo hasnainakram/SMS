@@ -1,6 +1,0 @@
-<center>
-<h1>New Student</h1>
-<hr class="colorgraph"><br>
-<%= render 'form' %>
-
-<a href="students"><input type="button" name="login" style="width:100px; height:30px;" value="Back" />

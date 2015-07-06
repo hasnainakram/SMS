@@ -31,7 +31,18 @@ ActiveRecord::Schema.define(version: 20150705231757) do
     t.datetime "updated_at", null: false
   end
 
-
+  create_table "lecturers", force: :cascade do |t|
+    t.string   "name"
+    t.string   "desig"
+    t.date     "date_of_join"
+    t.string   "address"
+    t.string   "qualification"
+    t.decimal  "cnic"
+    t.string   "type"
+    t.string   "description"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
 
   create_table "programs", force: :cascade do |t|
     t.string   "program_tigle"
@@ -66,7 +77,26 @@ ActiveRecord::Schema.define(version: 20150705231757) do
     t.date     "djoin"
   end
 
+  add_index "stds", ["program_id"], name: "index_stds_on_program_id", using: :btree
+  add_index "stds", ["session_id"], name: "index_stds_on_session_id", using: :btree
 
+  create_table "students", force: :cascade do |t|
+    t.string   "F_name"
+    t.string   "L_name"
+    t.string   "gender"
+    t.date     "B_date"
+    t.string   "email"
+    t.decimal  "mob"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "Regstration_no"
+    t.string   "department"
+    t.string   "program"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.integer  "program_id"
+  end
 
   add_index "students", ["program_id"], name: "index_students_on_program_id", using: :btree
 
