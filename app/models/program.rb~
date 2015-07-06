@@ -1,3 +1,5 @@
 class Program < ActiveRecord::Base
-has_many :students
+has_many :session
+validates :program_tigle,presence: true,length: { maximum: 50 }
+validates :duration,presence: true,length: { maximum: 50 }
 end

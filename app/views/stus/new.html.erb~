@@ -1,0 +1,10 @@
+<center>
+<br>
+<br>
+<br>
+<br>
+<h1>New Stu</h1>
+<hr class="colorgraph"><br>
+<%= render 'form' %>
+
+<%= link_to 'Back', stus_path %>

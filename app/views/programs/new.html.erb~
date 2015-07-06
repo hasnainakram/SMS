@@ -1,11 +1,11 @@
 <br>
 <br>
 <br>
-
-<h1>New Program</h1>
+<br>
 <center>
-<hr class="colorgraph"><b
+<hr class="colorgraph"><br>
+<h1>New Program</h1>
+
 <%= render 'form' %>
-<a>
+
 <%= link_to 'Back', programs_path %>
-</a>

@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
-
+<br>
+<br>
+<br>
+<br>
 <p>
   <strong>Program tigle:</strong>
   <%= @program.program_tigle %>

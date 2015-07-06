@@ -1,13 +1,26 @@
 <p id="notice"><%= notice %></p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <center>
 <h1>Add New Program</h1>
+<center>
 <hr class="colorgraph"><br>
+<a href="programs/new"><input type="button" name="login" style="width:200px; height:100px;" value="New Program" />
 
+<a href="users"><input type="button" name="login" style="width:200px; height:100px;" value="Back" />
+</a>
+<br>
+<br>
+<hr class="colorgraph"><br>
+<center>
 <table border="3" style="width:80%">
 <br>
 <br>
-<br>
-<br>
+<h1>Added Programs</h1>
   <thead>
     <tr>
       <th>Program Title</th>
@@ -32,9 +45,5 @@
 </table>
 
 <br>
+<a>
 
-
-<a href="programs/new"><input type="button" name="login" style="width:100px; height:30px;" value="New Program" />
-<br>
-<br>
-<a href="users"><input type="button" name="login" style="width:100px; height:30px;" value="Back" />

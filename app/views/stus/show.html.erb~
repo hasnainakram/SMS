@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+<br>
+<br>
+<br>
+<p>
+<br>
+<br>
+
+  <strong>Student name:</strong>
+  <%= @stu.student_name %>
+</p>
+
+<p>
+  <strong>F name:</strong>
+  <%= @stu.f_name %>
+</p>
+
+<p>
+  <strong>Reg no:</strong>
+  <%= @stu.reg_no %>
+</p>
+
+<p>
+  <strong>Program:</strong>
+  <%= @stu.program.program_tigle %>
+</p>
+
+<p>
+  <strong>Session:</strong>
+  <%= @stu.session.session_name %>
+</p>
+
+<p>
+  <strong>Domicile:</strong>
+  <%= @stu.domicile %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @stu.address %>
+</p>
+
+<p>
+  <strong>Mob:</strong>
+  <%= @stu.mob %>
+</p>
+
+<p>
+  <strong>Created By:</strong>
+  <%= @stu.user.name %>
+</p>
+
+<%= link_to 'Edit', edit_stu_path(@stu) %> |
+<%= link_to 'Back', stus_path %>

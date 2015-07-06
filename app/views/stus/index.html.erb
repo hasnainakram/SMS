@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+<br>
+ <div style='float: right;'>
+<iframe src="http://free.timeanddate.com/clock/i4qxeiaw/n4527/szw110/szh110/hoc000/hbw2/hfceee/cf100/hncccc/fdi76/mqc000/mql10/mqw4/mqd98/mhc000/mhl10/mhw4/mhd98/mmc000/mml10/mmw1/mmd98" frameborder="0" width="130" height="132"></iframe>
+</div> 
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+<h1>Add Student</h1>
+
+
+<hr class="colorgraph"><br>
+
+<a href="stus/new"><input type="button" name="login" style="width:200px; height:100px;" value="New Student" />
+<a href="users"><input type="button" name="login" style="width:200px; height:100px;" value="Back" />
+</a>
+<br>
+<br>
+<hr class="colorgraph"><br>
+<center>
+
+<br>
+
+<table>
+<table border="3" style="width:80%">
+  <thead>
+    <tr>
+      <th>Student name</th>
+      <th>Father name</th>
+      <th>Reg_no</th>
+      <th>Batch</th>
+      <th>Domicile</th>
+      <th>Address</th>
+      <th>Mobile</th>
+      <th>Created by</th>
+      <th colspan="3">Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stus.each do |stu| %>
+      <tr>
+        <td><%= stu.student_name %></td>
+        <td><%= stu.f_name %></td>
+        <td><%= stu.reg_no %></td>
+        <td><%= stu.session.batch %></td>
+        <td><%= stu.domicile %></td>
+        <td><%= stu.address %></td>
+        <td><%= stu.mob %></td>
+        <td><%= stu.user.name %></td>
+        <td><%= link_to 'Show', stu %></td>
+        <td><%= link_to 'Edit', edit_stu_path(stu) %></td>
+        <td><%= link_to 'Destroy', stu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

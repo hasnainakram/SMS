@@ -1,0 +1,51 @@
+<%= form_for(@stu) do |f| %>
+  <% if @stu.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@stu.errors.count, "error") %> prohibited this stu from being saved:</h2>
+
+      <ul>
+      <% @stu.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Student_Name %><br>
+    <%= f.text_field :student_name %>
+  </div>
+  <div class="field">
+    <%= f.label :Father_name %><br>
+    <%= f.text_field :f_name %>
+  </div>
+  <div class="field">
+    <%= f.label :reg_no %><br>
+    <%= f.text_field :reg_no %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Batch %><br>
+    <%= f.collection_select(:session_id, Session.all, :id, :batch )%>
+  </div>
+  <div class="field">
+    <%= f.label :domicile %><br>
+	<%= select_tag(:domicile, options_for_select([['Quetta', 1], ['Pashin', 2], ['Gawadar', 3], ['Pasni', 4], ['Loralai', 5], ['panjgur', 6]]))%>
+
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :mobile %><br>
+    <%= f.text_field :mob %>
+  </div>
+  <div class="field">
+    <%= f.label :Created_by %><br>
+        <%= f.collection_select(:user_id, User.all, :id, :name, :size => 20) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

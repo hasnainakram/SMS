@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<p>
+  <strong>Session name:</strong>
+
+  <%= @session.session_name %>
+</p>
+
+<p>
+  <strong>Program:</strong>
+  <%= @session.program.program_tigle %>
+</p>
+<p>
+  <strong>Batch:</strong>
+  <%= @session.batch %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @session.description %>
+</p>
+
+<%= link_to 'Edit', edit_session_path(@session) %> |
+<%= link_to 'Back', sessions_path %>

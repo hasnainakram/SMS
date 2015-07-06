@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  resources :lecturers
-  resources :students
+  resources :stus
+  resources :sessions
   resources :programs
-resources :lecturer
+resources :sessions
 resources :about
 resources :contact
 resources :faculty
@@ -18,6 +18,7 @@ get 'users/student'
 get 'users/index'
 get 'users/new'
 get 'users/program'
+get 'users/session'
 get 'about/index'
 get 'contact/index'
 get 'faculty/index'
@@ -27,8 +28,7 @@ get 'faculty/index'
 root :to => 'user_sessions#new'
 resources :user_sessions
 resources :users
-resources :student
-resources :lacturer
+
 get 'login' => 'user_sessions#new', :as => :login
 post 'logout' => 'user_sessions#destroy', :as => :logout
   # The priority is based upon order of creation: first created -> highest priority.
