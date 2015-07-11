@@ -31,7 +31,7 @@
       <th>Student name</th>
       <th>Father name</th>
       <th>Reg_no</th>
-      <<th>Batch</th>
+      <th>Batch</th>
       <th>Domicile</th>
       <th>Address</th>
       <th>Mobile</th>
@@ -46,7 +46,7 @@
         <td><%= stu.student_name %></td>
         <td><%= stu.f_name %></td>
         <td><%= stu.reg_no %></td>
-        <td><%= stu.session.batch %></td>
+        <td><%= stu.program.batch %></td>
         <td><%= stu.domicile %></td>
         <td><%= stu.address %></td>
         <td><%= stu.mob %></td>

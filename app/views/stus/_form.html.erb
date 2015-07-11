@@ -29,8 +29,18 @@
     <%= f.collection_select(:session_id, Session.all, :id, :batch )%>
   </div>
   <div class="field">
-    <%= f.label :domicile %><br>
-	<%= select_tag(:domicile, options_for_select([['Quetta', 1], ['Pashin', 2], ['Gawadar', 3], ['Pasni', 4], ['Loralai', 5], ['panjgur', 6]]))%>
+    <%= f.label :Domicile %><br>
+<select name="stu[domicile]">
+  <option>Quetta</option>
+  <option>Panjgur</option>
+  <option>Kharan</option>
+  <option>Pashin</option>
+  <option>Loralai</option>
+  <option>Pasni</option>
+  <option>Gawadar</option>
+  <option>Harnai</option>
+  <option disabled="disabled">restricted</option>
+</select>
 
   </div>
   <div class="field">
