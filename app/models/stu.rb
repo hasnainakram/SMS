@@ -5,8 +5,7 @@ class Stu < ActiveRecord::Base
 validates :student_name,presence: true,length: { maximum: 50 }
 validates :f_name,presence: true,length: { maximum: 50 }
 validates :reg_no,presence: true,length: { maximum: 50 }
-
 validates :address,presence: true,length: { maximum: 50 }
 validates :mob,presence: true,length: { maximum: 50 }
-
+#before_save {self.tt = current_user.name}
 end

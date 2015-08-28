@@ -54,6 +54,10 @@ class SessionsController < ApplicationController
   # DELETE /sessions/1
   # DELETE /sessions/1.json
   def destroy
+def destroy
+log_out
+redirect_to root_url
+end
     @session.destroy
     respond_to do |format|
       format.html { redirect_to sessions_url, notice: 'Session was successfully destroyed.' }

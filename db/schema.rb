@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150705231757) do
+ActiveRecord::Schema.define(version: 20150827234532) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,23 @@ ActiveRecord::Schema.define(version: 20150705231757) do
 
   add_index "sessions", ["program_id"], name: "index_sessions_on_program_id", using: :btree
 
+  create_table "students", force: :cascade do |t|
+    t.string   "F_name"
+    t.string   "L_name"
+    t.string   "gender"
+    t.date     "B_date"
+    t.string   "email"
+    t.decimal  "mob"
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "Regstration_no"
+    t.string   "department"
+    t.string   "program"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
   create_table "stus", force: :cascade do |t|
     t.string   "student_name"
     t.string   "f_name"
@@ -59,8 +76,12 @@ ActiveRecord::Schema.define(version: 20150705231757) do
     t.string   "address"
     t.decimal  "mob"
     t.integer  "user_id"
+    t.string   "by"
+    t.string   "tt"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.string   "Created"
+   
   end
 
   add_index "stus", ["program_id"], name: "index_stus_on_program_id", using: :btree

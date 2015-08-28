@@ -53,7 +53,8 @@
   </div>
   <div class="field">
     <%= f.label :Created_by %><br>
-        <%= f.collection_select(:user_id, User.all, :id, :name, :size => 20) %>
+	<%=f.text_field :tt, :value=> current_user.name, :readonly => true%>
+
   </div>
   <div class="actions">
     <%= f.submit %>

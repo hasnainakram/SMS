@@ -32,8 +32,13 @@
     <%= f.label :Domicile %><br>
 <select name="stu[domicile]">
   <option>Quetta</option>
-  <option>joke</option>
-  <option>poem</option>
+  <option>Panjgur</option>
+  <option>Kharan</option>
+  <option>Pashin</option>
+  <option>Loralai</option>
+  <option>Pasni</option>
+  <option>Gawadar</option>
+  <option>Harnai</option>
   <option disabled="disabled">restricted</option>
 </select>
 
@@ -48,7 +53,8 @@
   </div>
   <div class="field">
     <%= f.label :Created_by %><br>
-        <%= f.collection_select(:user_id, User.all, :id, :name, :size => 20) %>
+	<%=f.text_field :tt, :value=> current_user.name, :restricted => true%>
+
   </div>
   <div class="actions">
     <%= f.submit %>

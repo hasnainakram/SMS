@@ -20,14 +20,11 @@
   <%= @stu.reg_no %>
 </p>
 
-<p>
-  <strong>Program:</strong>
-  <%= @stu.program.program_tigle %>
-</p>
+
 
 <p>
-  <strong>Session:</strong>
-  <%= @stu.session.session_name %>
+  <strong>Batch:</strong>
+  <%= @stu.session.batch %>
 </p>
 
 <p>

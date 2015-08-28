@@ -11,7 +11,7 @@ skip_before_filter :require_login, except: [:destroy]
       redirect_back_or_to(:users)#, notice: 'Login successful')
     else
 
-      flash.now[:alert] = 'Wrong Credentials'
+      flash.now[:alert] = 'Wrong Email or Password'
       render action: 'new'
     end
   end
@@ -20,7 +20,7 @@ skip_before_filter :require_login, except: [:destroy]
     logout
     redirect_to(:users, notice: 'Logged out!')
   end
-def user_sessions/index
+def user_sessions
 
 end
 end

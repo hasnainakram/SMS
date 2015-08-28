@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
+<br>
+<div style='float: right;'>
 
+Hi  <%= current_user.name %>&nbsp &nbsp
+</div>
 
-    <title>DMS</title>
+    <title>SMS</title>
       <%= stylesheet_link_tag    "application" %>
       <%= javascript_include_tag "application" %>
       <%= csrf_meta_tags %>
@@ -34,8 +38,9 @@
  <a href="contact">Contact</a> 
 
 &nbsp
+ <%= link_to "Log out",root_path,method: "get" %>
 
-      <%= link_to "Logout", :user_sessions, method: :post %>
+
 &nbsp
 
 <hr class="colorgraph"><br>

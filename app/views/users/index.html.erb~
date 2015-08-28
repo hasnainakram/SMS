@@ -11,7 +11,7 @@
      
 
 <center>
-<h1>Welcome Admin</h1>
+<h1>Welcome  <%= current_user.name %></h1>
 
 <hr class="colorgraph"><br>
 <br>
@@ -21,7 +21,7 @@
 <a>
 
 
-<a href="users/new"><input type="button" name="login" style="width:200px; height:100px;" value="New User" />
+<a href="users/new"><input type="button" name="login" style="width:200px; height:100px;" value="New Admin User" />
 <a href="programs"><input type="button" name="login" style="width:200px; height:100px;" value="Programs" />
 <a href="sessions"><input type="button" name="login" style="width:200px; height:100px;" value="Sessions" />
 <a href="stus"><input type="button" name="login" style="width:200px; height:100px;" value="Students" />
@@ -65,7 +65,7 @@
 
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data:path_user_sessions: { confirm: 'Are you sure?' } %></td>
       </tr>
 
     <% end %>

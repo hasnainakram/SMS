@@ -46,7 +46,7 @@
         <td><%= stu.student_name %></td>
         <td><%= stu.f_name %></td>
         <td><%= stu.reg_no %></td>
-        <td><%= stu.program.batch %></td>
+        <td><%= stu.session.batch %></td>
         <td><%= stu.domicile %></td>
         <td><%= stu.address %></td>
         <td><%= stu.mob %></td>

@@ -17,7 +17,11 @@
   </div>
   <div class="field">
     <%= f.label :Duration %><br>
-    <%= f.text_field :Duration %>
+    <select name="program[Duration]">
+  <option>2 Years</option>
+  <option>4 Years</option>
+  <option disabled="disabled">restricted</option>
+</select>
   </div>
   <div class="actions">
     <%= f.submit %>

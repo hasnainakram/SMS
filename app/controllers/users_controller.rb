@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+before_action :logged_in_user,only: [:edit,:update,:destroy]
+before_action :correct_user,only: [:edit,:update,:destroy]
 skip_before_filter :require_login, only: [:index, :new, :create]
   # GET /users
   # GET /users.json
@@ -57,8 +59,9 @@ skip_before_filter :require_login, only: [:index, :new, :create]
   def destroy
     @user.destroy
     respond_to do |format|
-      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
+      format.html { redirect_to root_url, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
+
     end
   end
 
@@ -72,5 +75,23 @@ skip_before_filter :require_login, only: [:index, :new, :create]
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
     end
+# Confirms a logged-in user.
+	def logged_in_user
+	unless logged_in?
+	#flash[:danger] = "Please log in."
+	redirect_to root_url
+	end
+
+def correct_user
+@user = User.find(params[:id])
+# redirect_to(root_url) unless current_user?(@user)
+
+redirect_to(root_url) unless @user == current_user
+
+
+  end 
+
+end
+
 end
 

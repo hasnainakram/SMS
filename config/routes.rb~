@@ -25,10 +25,10 @@ get 'faculty/index'
 
   resources :users
 #root :to => 'users#index'
-root :to => 'user_sessions#new'
-resources :user_sessions
+root :to => 'user_sessions#index'
+#resources :user_sessions
 resources :users
-
+#delete 'logout' =>'sessions#destroy'
 get 'login' => 'user_sessions#new', :as => :login
 post 'logout' => 'user_sessions#destroy', :as => :logout
   # The priority is based upon order of creation: first created -> highest priority.
