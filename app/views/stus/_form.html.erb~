@@ -53,7 +53,7 @@
   </div>
   <div class="field">
     <%= f.label :Created_by %><br>
-	<%=f.text_field :tt, :value=> current_user.name, :restricted => true%>
+	<%=f.text_field :tt, :value=> current_user.name, :readonly => true%>
 
   </div>
   <div class="actions">

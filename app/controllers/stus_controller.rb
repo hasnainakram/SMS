@@ -69,6 +69,6 @@ class StusController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def stu_params
-      params.require(:stu).permit(:student_name, :f_name, :reg_no, :program_id, :session_id, :domicile, :address, :mob,:tt )
+      params.require(:stu).permit(:student_name, :f_name, :reg_no, :program_id, :session_id, :domicile, :address, :mob )
     end
 end

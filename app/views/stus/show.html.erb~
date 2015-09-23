@@ -44,7 +44,7 @@
 
 <p>
   <strong>Created By:</strong>
-  <%= @stu.user.name %>
+  <%= @stu.tt %>
 </p>
 
 <%= link_to 'Edit', edit_stu_path(@stu) %> |

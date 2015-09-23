@@ -76,11 +76,11 @@ ActiveRecord::Schema.define(version: 20150827234532) do
     t.string   "address"
     t.decimal  "mob"
     t.integer  "user_id"
+    t.string   "tt"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.string   "Created"
-    t.string   "by"
-    t.string   "tt"
+   
   end
 
   add_index "stus", ["program_id"], name: "index_stus_on_program_id", using: :btree
